@@ -420,7 +420,7 @@ p {
 }
 
 .header-contact ul li img{}
-.header-contact ul li span a {
+.header-contact ul li span a,.header-contact ul li span {
 	color: #dee2e6;
 	font-size: 15px;
 	font-weight: 400;
@@ -1805,7 +1805,7 @@ p {
 .footer-address ul li .cont{
     padding-left: 35px;
 }
-.footer-address ul li .cont p{
+.footer-address ul li .cont p, .footer-address ul li .cont a{
     color: #fff;
 }
 
