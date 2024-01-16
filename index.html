@@ -1,0 +1,1266 @@
+<!doctype html>
+<html lang="en">
+<head>
+   
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--====== Title ======-->
+    <title>CSC Pallavaram</title>
+    
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="images/CSC favicon.ico" type="image/ico">
+
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="css/slick.css">
+
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <!--====== Nice Select css ======-->
+    <link rel="stylesheet" href="css/nice-select.css">
+    
+    <!--====== Nice Number css ======-->
+    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
+
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="css/default.css">
+    
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="css/responsive.css">
+  
+    <!--====== Font Awesome ======-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-QhcnP8Ys1QLqD70vAwx2D1t5pZiydP5z8jKNzlx8X+buErhu7Vg2UzNtyeQfPO89GLapdB4KZbp7RLPMR1/ftA==" crossorigin="anonymous" />
+
+
+    <script>
+   function formatDate(date) {
+      const options = { day: 'numeric', month: 'long', year: 'numeric' };
+      return date.toLocaleDateString('en-GB', options);
+    }
+
+    function updateNextMonday() {
+      const today = new Date();
+      const daysUntilNextMonday = (1 + 7 - today.getDay()) ;
+      const nextMonday = new Date(today.getFullYear(), today.getMonth(), today.getDate() + daysUntilNextMonday);
+      const formattedDate = formatDate(nextMonday);
+
+      // Update the HTML element with id "nextMondayDate"
+      document.getElementById("nextMondayDate").textContent = formattedDate;
+      console.log(formattedDate);
+    }
+
+    // // Add an event listener to call updateNextMonday when the page finishes loading
+    // document.addEventListener('DOMContentLoaded', updateNextMonday);  
+    function updateNextThursday() {
+      const today = new Date();
+      const daysUntilNextThursday = (4 + 7 - today.getDay()) % 7; // Thursday is the 4th day of the week
+      const nextThursday = new Date(today.getFullYear(), today.getMonth(), today.getDate() + daysUntilNextThursday + 7);
+      const formattedDate = formatDate(nextThursday);
+
+      // Update the HTML element with id "nextThursdayDate"
+      document.getElementById("nextThursdayDate").textContent = formattedDate;
+    }
+
+    function updateTwoWeeksLater() {
+      const today = new Date();
+      const daysUntilTwoWeeksLater = (1 + 7 - today.getDay()) % 7 + 14; // Two weeks later
+      const twoWeeksLater = new Date(today.getFullYear(), today.getMonth(), today.getDate() + daysUntilTwoWeeksLater);
+      const formattedDate = formatDate(twoWeeksLater);
+      document.getElementById("twoWeeksLaterDate").textContent = formattedDate;
+    }
+
+    // Add an event listener to call updateNextThursday when the page finishes loading
+    document.addEventListener('DOMContentLoaded', function() {
+      updateNextMonday();
+      updateNextThursday();
+      updateTwoWeeksLater();
+    });
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+
+    function contactedMe(){
+    $(".contact-me").fadeIn(600);
+};
+function myFunction() {
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            alert("Form submitted!" + name + phone);
+
+            // You can add your custom logic or function calls here
+        }
+function collectDetails() {
+            // Get values from input fields
+            var name = document.getElementById("name").value;
+            // var phone = document.getElementById("phone").value;
+            // var email = document.getElementById("email").value;
+            var subject = document.getElementById("subject").value;
+            // var message = document.getElementById("message").value;
+
+            // Display the collected details (you can modify this part)
+            alert("Welcome to CSC "+name);
+            //alert("https://wa.me/919884237623?text=Hello%20from%20Website%20Visitor%0A"+"Name: " + name + "\nPhone: " + phone + "\nEmail: " + email+ "\nSubject: " + subject+ "\nMessage: " + message);
+            // You can further process or send the collected details to a server using AJAX
+            // For now, let's prevent the form from submitting
+            //return false;
+            // Specify the URL you want to open
+            //var url = "https://wa.me/919884237623?text=Hello%20from%20Website%20Visitor%0A"+"I am *" + name + "*%0APhone: " + phone + "%0AEmail: " + email+ "%0AI want to know about *" + subject+ "*%0AMessage: " + message;
+            var url = "https://wa.me/919884237623?text=Hi, This is *" + name + "*%0AI want to know about *" + subject+"*";
+
+            // Open the URL in a new window or tab
+            window.open(url, "_blank");
+        }
+    </script>
+</head>
+
+<body>
+   
+    <!--====== PRELOADER PART START ======-->
+    
+    <div class="preloader">
+        <div class="loader rubix-cube">
+            <div class="layer layer-1"></div>
+            <div class="layer layer-2"></div>
+            <div class="layer layer-3 color-1"></div>
+            <div class="layer layer-4"></div>
+            <div class="layer layer-5"></div>
+            <div class="layer layer-6"></div>
+            <div class="layer layer-7"></div>
+            <div class="layer layer-8"></div>
+        </div>
+    </div>
+    
+    <!--====== PRELOADER PART START ======-->
+    
+    <!--====== HEADER PART START ======-->
+    <header id="header-part">
+       
+        <div class="header-top d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header-contact text-lg-left text-center">
+                            <ul>
+                                <li><img src="images/all-icon/map.png" alt="icon"><span><a href="https://maps.app.goo.gl/LrDodRsn4ArFCaS27" target="_blank">No. 4/19, Church Street, Pallavaram</a> </span></li>
+                                <li><img src="images/all-icon/email.png" alt="icon"><span><a href="mailto:cscpallavaram@gmail.com">cscpallavaram@gmail.com</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="header-contact text-lg-right text-center">
+                            <ul>
+                                <li>
+                                    <img src="images/all-icon/calendar4.svg" alt="icon">
+                                    <span><a href="">Monday to Saturday - 7 AM to 9 PM</a></span></li>
+                            </ul>
+                            
+                            <p></p>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header top -->
+        
+        <div class="header-logo-support pt-30 pb-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="images/CSC PVM.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8">
+                        <div class="support-button float-right d-none d-md-block">
+                            <div class="support float-left">
+                                <div class="icon">
+                                    <img src="images/all-icon/support.png" alt="icon">
+                                </div>
+                                <div class="cont">
+                                    <p>Need Help? Feel Free Call Us</p>
+                                    <span><a href="https://wa.me/919884237623?text=Hello%20from%20Website%20Visitor%0Athere!" target="_blank">+91 9710 434343</a>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="button float-left">
+                                <a href="javascript:contactedMe()" class="main-btn">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header logo support -->
+        
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-md-10 col-sm-9 col-8">
+                        <nav class="navbar navbar-expand-lg">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a class="active" href="#slider-part">Home</a>
+                                        <!-- <ul class="sub-menu">
+                                            <li><a class="active" href="index-2.html">Home 01</a></li>
+                                            <li><a href="index-3.html">Home 02</a></li>
+                                            <li><a href="index-4.html">Home 03</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#about-part">About us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#course-part">Courses</a>
+                                        <!-- <ul class="sub-menu">
+                                            <li><a href="courses.html">Courses</a></li>
+                                            <li><a href="courses-singel.html">Course Singel</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#teachers-part">Gallery</a>
+                                        <!-- <ul class="sub-menu">
+                                            <li><a href="events.html">Events</a></li>
+                                            <li><a href="events-singel.html">Event Singel</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#patnar-logo">Centers</a>
+                                        <!-- <ul class="sub-menu">
+                                            <li><a href="teachers.html">teachers</a></li>
+                                            <li><a href="teachers-singel.html">teacher Singel</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#testimonial">Testimonial</a>
+                                        <!-- <ul class="sub-menu">
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog-singel.html">Blog Singel</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#video-feature">Features</a>
+                                        <!-- <ul class="sub-menu">
+                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="shop-singel.html">Shop Singel</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#footer-part">Contact</a>
+                                        <!-- <ul class="sub-menu">
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                            <li><a href="contact-2.html">Contact Us 2</a></li>
+                                        </ul> -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav> <!-- nav -->
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-4">
+                        <div class="right-icon text-right">
+                            <ul>
+                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                                <!-- <li><a href=""><i class="fa fa-shopping-bag"></i><span>0</span></a></li> -->
+                            </ul>
+                        </div> <!-- right icon -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div>
+        
+    </header>
+    
+    <!--====== HEADER PART ENDS ======-->
+   
+    <!--====== SEARCH BOX PART START ======-->
+    
+    <div class="search-box">
+        <div class="serach-form">
+            <div class="closebtn">
+                <span></span>
+                <span></span>
+            </div>
+            <form action="#">
+                <input type="text" placeholder="Search by keyword">
+                <button><i class="fa fa-search"></i></button>
+            </form>
+        </div> <!-- serach form -->
+    </div>
+    
+    <!--====== SEARCH BOX PART ENDS ======-->
+
+    <!--====== CONTACT PART START ======-->
+
+
+    <div class="contact-me">
+        <div class="contact-from mt-30 col-lg-7">
+            <div class="closebtn">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="section-title1">
+                <h5>Contact Us</h5>
+                <h2>Keep in touch</h2>
+            </div> <!-- section title -->
+            <div class="main-form pt-45">
+                <form id="contact-form" action="#" method="post" data-toggle="validator">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="singel-form form-group">
+                                <input name="name" id = "name" type="text" placeholder="Your name" data-error="Name is required." required="required">
+                                <div class="help-block with-errors"></div>
+                            </div> <!-- singel form -->
+                        </div>
+                        <br> <br>
+                        <div class="col-md-6">
+                            <div class="singel-form form-group">
+                                <input name="subject"  id="subject" type="text" placeholder="Subject" data-error="Subject is required." required="required">
+                                <div class="help-block with-errors"></div>
+                            </div> 
+                        </div>
+                        <div class="col-md-12">
+                            <div class="singel-form">
+                                <!-- <button type="submit" class="main-btn">Send</button> -->
+                                <!-- <a class="main-btn" href="https://wa.me/919884237623?text=Hello%20from%20Website%20Visitor%0Athere!" target="_blank">WhatsApp</a> -->
+                                <a class="main-btn" href="javascript:collectDetails()">Get a CallBack</a>
+                            
+                            </div> <!-- singel form -->
+                        </div> 
+                    </div> <!-- row -->
+                </form>
+            </div> <!-- main form -->
+        </div> <!--  contact from -->
+    </div>
+    <!--====== CONTACT PART ENDS ======-->
+
+    <!--====== SLIDER PART START ======-->
+    
+    <section id="slider-part" class="slider-active">
+        <div class="single-slider bg_cover pt-150" style="background-image: url(images/slider/s-1.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right path for education</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">
+                                At CSC Pallavaram, we are dedicated in guiding our students along the right path to a successful and fulfilling career in the ever-expanding realm of technology.</p>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="#category-part">Read More</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="javascript:contactedMe()">Get Started</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+        
+        <div class="single-slider bg_cover pt-150" style="background-image: url(images/slider/s-2.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right path for education</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">
+                                At CSC Pallavaram, we are dedicated in guiding our students along the right path to a successful and fulfilling career in the ever-expanding realm of technology.</p>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="#category-part">Read More</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="javascript:contactedMe()">Get Started</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+        
+        <div class="single-slider bg_cover pt-150" style="background-image: url(images/slider/s-3.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right path for education</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">
+                                At CSC Pallavaram, we are dedicated in guiding our students along the right path to a successful and fulfilling career in the ever-expanding realm of technology.</p>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="#category-part">Read More</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="javascript:contactedMe()">Get Started</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+    </section>
+    
+    <!--====== SLIDER PART ENDS ======-->
+   
+    <!--====== CATEGORY PART START ======-->
+    
+    <section id="category-part">
+        <div class="container">
+            <div class="category pt-40 pb-80">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="category-text pt-40">
+                            <h2>Best platform to learn everything</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-8 offset-2">
+                        <div class="row category-slied mt-40">
+                            <div class="col-lg-4">
+                                <a href="javascript:contactedMe()">
+                                    <span class="singel-category text-center color-1">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-1.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span data-animation="fadeInUp" data-delay="1.3s">Programming Language</span>
+                                        </span>
+                                    </span> <!-- singel category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="javascript:contactedMe()">
+                                    <span class="singel-category text-center color-2">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-2.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>Office Automation</span>
+                                        </span>
+                                    </span> <!-- singel category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="javascript:contactedMe()">
+                                    <span class="singel-category text-center color-3">
+                                        <span class="icon">
+                                            <img src="images/all-icon/ctg-3.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>Financial & Accounting Tools</span>
+                                        </span>
+                                    </span> <!-- singel category -->
+                                </a>
+                            </div>                            
+                        </div> <!-- category slied -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- category -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== CATEGORY PART ENDS ======-->
+   
+    <!--====== ABOUT PART START ======-->
+    
+    <section id="about-part" class="pt-65">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="section-title mt-50">
+                        <h5>About us</h5>
+                        <h2>Welcome to CSC Pallavaram </h2>
+                    </div> <!-- section title -->
+                    <div class="about-cont">
+                        <p>CSC Pallavaram aims to equip individuals with the knowledge and practical skills required to excel in the rapidly evolving technology industry.typically offer a well-structured curriculum covering Computer basics, MS Office, Tally, Programming Languages, databases, and other relevant topics.The curriculum should align with industry requirements, covering in-demand technologies and tools. This ensures that students are prepared for the job market upon Completion.</p>
+                        <a href="javascript:contactedMe()" class="main-btn mt-55">Learn More</a>
+                    </div>
+                </div> <!-- about cont -->
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="about-event mt-50">
+                        <div class="event-title">
+                            <h3>Upcoming Batches</h3>
+                        </div> <!-- event title -->
+                        <ul>
+                            <li>
+                                <div class="singel-event">
+                                    <span><i class="fa fa-calendar"></i> <span id="nextMondayDate"></span></span>
+                                    <a href="javascript:contactedMe()"><h4>New MS Office Batch</h4></a>
+                                    <span><i class="fa fa-clock-o"></i> 7 AM to 9 PM</span>
+                                    <span><i class="fa fa-map-marker"></i> CSC Pallavaram</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="singel-event">
+                                    <span><i class="fa fa-calendar"></i> <span id="nextThursdayDate"></span></span>
+                                    <a href="javascript:contactedMe()"><h4>New Tally Batch</h4></a>
+                                    <span><i class="fa fa-clock-o"></i>  7 AM to 9 PM</span>
+                                    <span><i class="fa fa-map-marker"></i> CSC Pallavaram</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="singel-event">
+                                    <span><i class="fa fa-calendar"></i> <span id="twoWeeksLaterDate"></span></span>
+                                    <a href="javascript:contactedMe()"><h4>New Programming Batch</h4></a>
+                                    <span><i class="fa fa-clock-o"></i>  7 AM to 9 PM</span>
+                                    <span><i class="fa fa-map-marker"></i> CSC Pallavaram</span>
+                                </div>
+                            </li>
+                        </ul> 
+                    </div> <!-- about event -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="about-bg">
+            <img src="images/about/bg-1.png" alt="About">
+        </div>
+    </section>
+    
+    <!--====== ABOUT PART ENDS ======-->
+   
+    <!--====== APPLY PART START ======-->
+    
+    <section id="apply-aprt" class="pb-120">
+        <div class="container">
+            <div class="apply">
+                <div class="row no-gutters">
+                    <div class="col-lg-6">
+                        <div class="apply-cont apply-color-1">
+                            <h3>Apply for Mega Offer</h3>
+                            <p>Don't miss this chance to kickstart your journey into the world of computer software development with our New Year offer. Take the first step towards a rewarding and fulfilling career.</p>
+                            <a href="javascript:contactedMe()" class="main-btn">Apply Now</a>
+                        </div> <!-- apply cont -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="apply-cont apply-color-2">
+                            <h3>Apply for scholarship</h3>
+                            <p>Scholarship recipients gain access to state-of-the-art software, resources, and tools that will enhance your learning experience. Stay ahead of the curve and immerse yourself in the latest technologies.</p>
+                            <a href="javascript:contactedMe()" class="main-btn">Apply Now</a>
+                        </div> <!-- apply cont -->
+                    </div> 
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== APPLY PART ENDS ======-->
+   <!--====== COUNTER PART START ======-->
+    
+   <div id="counter-part" class="bg_cover pt-65 pb-110" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="singel-counter text-center mt-40">
+                    <span><span class="counter">3,000</span>+</span>
+                    <p>Students enrolled</p>
+                </div> <!-- singel counter -->
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="singel-counter text-center mt-40">
+                    <span><span class="counter">20</span>+</span>
+                    <p>Courses Available</p>
+                </div> <!-- singel counter -->
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="singel-counter text-center mt-40">
+                    <span><span class="counter">2,000</span>+</span>
+                    <p>Certified Students</p>
+                </div> <!-- singel counter -->
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="singel-counter text-center mt-40">
+                    <span><span class="counter">50</span>+</span>
+                    <p>In Demand Skills</p>
+                </div> <!-- singel counter -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</div>
+
+<!--====== COUNTER PART ENDS ======-->
+
+    <!--====== COURSE PART START ======-->
+    
+    <section id="course-part" class="pt-115 pb-120 gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-45">
+                        <h5>Our course</h5>
+                        <h2>Featured courses </h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row course-slied mt-30">
+                <div class="col-lg-4">
+                    <div class="singel-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/course/dmo.jpg" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>DMO</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>2 Months</span>
+                            <a href="javascript:contactedMe()"><h4>Learn MS Office from start for beginner</h4></a>
+                        </div>
+                    </div> <!-- singel course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="singel-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/course/dca2.jpg" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>DCA</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>6 Months</span>
+                            <a href="javascript:contactedMe()"><h4>Diploma in Computer Application</h4></a>
+                        </div>
+                    </div> <!-- singel course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="singel-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/course/hdca2.jpg" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>HDCA</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>12 Months</span>
+                            <a href="javascript:contactedMe()"><h4>Honours Diploma in Computer Application</h4></a>
+                        </div>
+                    </div> <!-- singel course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="singel-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/course/adjp.jpg" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>ADJP</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>4 Months</span>
+                            <a href="javascript:contactedMe()"><h4>Advanced Diploma in Java Programming</h4></a>
+                        </div>
+                    </div> <!-- singel course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="singel-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/course/adpp.jpg" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>ADPP</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>4 Months</span>
+                            <a href="javascript:contactedMe()"><h4>Advanced Diploma in Python Programming</h4></a>
+                        </div>
+                    </div> <!-- singel course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="singel-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/course/hdfd.jpg" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>HDFD</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                            <span>12 Months</span>
+                            <a href="javascript:contactedMe()"><h4>Honours Diploma in Full Stack Development</h4></a>
+                        </div>
+                    </div> <!-- singel course -->
+                </div>
+            </div> <!-- course slied -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== COURSE PART ENDS ======-->
+   
+    <!--====== VIDEO FEATURE PART START ======-->
+    
+    <section id="video-feature" class="bg_cover pt-60 pb-110" style="background-image: url(images/bg-1.jpg)">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-last order-lg-first">
+                    <div class="video text-lg-left text-center pt-50">
+                        
+                    </div> <!-- row -->
+                </div>
+                <div class="col-lg-5 offset-lg-1 order-first order-lg-last">
+                    <div class="feature pt-50">
+                        <div class="feature-title">
+                            <h3>Our Features</h3>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="singel-feature">
+                                    <div class="icon">
+                                        <img src="images/all-icon/f-1.png" alt="icon">
+                                    </div>
+                                    <div class="cont">
+                                        <h4>ISO Certificate</h4>
+                                        <p>We offer certifications upon completion of specific courses or programs. These certifications can be valuable credentials for individuals seeking employment.</p>
+                                    </div>
+                                </div> <!-- singel feature -->
+                            </li>
+                            <li>
+                                <div class="singel-feature">
+                                    <div class="icon">
+                                        <img src="images/all-icon/f-2.png" alt="icon">
+                                    </div>
+                                    <div class="cont">
+                                        <h4>Training</h4>
+                                        <p>Practical, hands-on training is a key component of software education. Students typically work on projects, coding exercises, and real-world scenarios.</p>
+                                    </div>
+                                </div> <!-- singel feature -->
+                            </li>
+                            <li>
+                                <div class="singel-feature">
+                                    <div class="icon">
+                                        <img src="images/all-icon/f-3.png" alt="icon">
+                                    </div>
+                                    <div class="cont">
+                                        <h4>Course Materials</h4>
+                                        <p>At our CSC Pallavaram Institute, we prioritize providing students with cutting-edge course materials that serve as a cornerstone for their educational journey. </p>
+                                    </div>
+                                </div> <!-- singel feature -->
+                            </li>
+                        </ul>
+                    </div> <!-- feature -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="feature-bg"></div> <!-- feature bg -->
+    </section>
+    
+    <!--====== VIDEO FEATURE PART ENDS ======-->
+   
+    <!--====== TEACHERS PART START ======-->
+    
+    <section id="teachers-part" class="pt-70 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="section-title mt-50">
+                        <h5>Featured Projects</h5>
+                        <h2>Meet Our Students Work</h2>
+                    </div> <!-- section title -->
+                    <div class="teachers-cont">
+                        <p>At our CSC Pallavaram Institute, we recognize the indispensable value of real-life project experience in shaping the learning journey of our students. The integration of hands-on, practical projects into our curriculum is not merely a supplementary component but a fundamental aspect designed to bridge the gap between theoretical knowledge and real-world application. Here's why we emphasize real-life project experience</p>
+                        <a href="javascript:contactedMe()" class="main-btn mt-55">Grow with us</a>
+                    </div> <!-- teachers cont -->
+                </div>
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="teachers mt-20">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="singel-teachers mt-30 text-center">
+                                    <div class="image">
+                                        <img src="images/std/2.jpg" alt="Teachers">
+                                    </div>
+                                    <div class="cont">
+                                        <a href="https://arrravind.github.io/Resume/" target="_blank"><h6>Aravind M</h6></a>
+                                        <span>HDCA Programming</span>
+                                    </div>
+                                </div> <!-- singel teachers -->
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="singel-teachers mt-30 text-center">
+                                    <div class="image">
+                                        <img src="images/std/4.jpg" alt="Teachers">
+                                    </div>
+                                    <div class="cont">
+                                        <a href="https://aravindash.github.io/resume/" target="_blank"><h6>Aravind R</h6></a>
+                                        <span>HDCA Programming</span>
+                                    </div>
+                                </div> <!-- singel teachers -->
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="singel-teachers mt-30 text-center">
+                                    <div class="image">
+                                        <img src="images/std/6.jpg" alt="Teachers">
+                                    </div>
+                                    <div class="cont">
+                                        <a href="https://abinaya-0102.github.io/csc/" target="_blank"><h6>Abinaya</h6></a>
+                                        <span>HDCA Tally</span>
+                                    </div>
+                                </div> <!-- singel teachers -->
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="singel-teachers mt-30 text-center">
+                                    <div class="image">
+                                        <img src="images/std/7.jpg" alt="Teachers">
+                                    </div>
+                                    <div class="cont">
+                                        <a href="https://yaminidevi-01.github.io/csc/" target="_blank"><h6>Yamini</h6></a>
+                                        <span>HDCA Tally</span>
+                                    </div>
+                                </div> <!-- singel teachers -->
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- teachers -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== TEACHERS PART ENDS ======-->
+   
+    <!--====== PUBLICATION PART START ======-->
+    
+    <section id="publication-part" class="pt-115 pb-120 gray-bg">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-lg-6 col-md-8 col-sm-7">
+                    <div class="section-title pb-60">
+                        <h5>Training</h5>
+                        <h2>For Subjects</h2>
+                    </div> <!-- section title -->
+                </div>
+                <div class="col-lg-6 col-md-4 col-sm-5">
+                    <div class="products-btn text-right pb-60">
+                        <a href="javascript:contactedMe()" class="main-btn">All Technologies</a>
+                    </div> <!-- products btn -->
+                </div>
+            </div> <!-- row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 col-sm-8">
+                    <div class="singel-publication mt-30">
+                        <div class="image">
+                            <img src="images/subjects/Primelogo.png" alt="Publication">
+                            <div class="add-cart">
+                                <ul>
+                                    <li><a href="javascript:contactedMe()"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href="javascript:contactedMe()"><i class="fa fa-heart-o"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <div class="name">
+                                <a href="javascript:contactedMe()"><h6>Tally Prime </h6></a>
+                                <span>3 Months</span>
+                            </div>
+                            <div class="button text-right">
+                                <a href="javascript:contactedMe()" class="main-btn">Join Now</a>
+                            </div>
+                        </div>
+                    </div> <!-- singel publication -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-8">
+                    <div class="singel-publication mt-30">
+                        <div class="image">
+                            <img src="images/subjects/python.png" alt="Publication">
+                            <div class="add-cart">
+                                <ul>
+                                    <li><a href="javascript:contactedMe()"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href="javascript:contactedMe()"><i class="fa fa-heart-o"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <div class="name">
+                                <a href="javascript:contactedMe()"><h6>Python </h6></a>
+                                <span>2 Months</span>
+                            </div>
+                            <div class="button text-right">
+                                <a href="javascript:contactedMe()" class="main-btn">Join Now</a>
+                            </div>
+                        </div>
+                    </div> <!-- singel publication -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-8">
+                    <div class="singel-publication mt-30">
+                        <div class="image">
+                            <img src="images/subjects/java-logo-1.png" alt="Publication">
+                            <div class="add-cart">
+                                <ul>
+                                    <li><a href="javascript:contactedMe()"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href="javascript:contactedMe()"><i class="fa fa-heart-o"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <div class="name">
+                                <a href="javascript:contactedMe()"><h6>Java </h6></a>
+                                <span>3 Months</span>
+                            </div>
+                            <div class="button text-right">
+                                <a href="javascript:contactedMe()" class="main-btn">Join Now</a>
+                            </div>
+                        </div>
+                    </div> <!-- singel publication -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-8">
+                    <div class="singel-publication mt-30">
+                        <div class="image">
+                            <img src="images/subjects/html5.png" alt="Publication">
+                            <div class="add-cart">
+                                <ul>
+                                    <li><a href="javascript:contactedMe()"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href="javascript:contactedMe()"><i class="fa fa-heart-o"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <div class="name">
+                                <a href="javascript:contactedMe()"><h6>HTML 5</h6></a>
+                                <span>1 Month</span>
+                            </div>
+                            <div class="button text-right">
+                                <a href="javascript:contactedMe()" class="main-btn">Join Now</a>
+                            </div>
+                        </div>
+                    </div> <!-- singel publication -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== PUBLICATION PART ENDS ======-->
+   
+    <!--====== TEASTIMONIAL PART START ======-->
+    
+    <section id="testimonial" class="bg_cover pt-115 pb-115" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-40">
+                        <h5>Testimonials</h5>
+                        <h2>What our Students say</h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row testimonial-slied mt-40">
+                <div class="col-lg-6">
+                    <div class="singel-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/t-1.jpg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-cont">
+                            <p>The quality of education is very nice. they follow updated syllabus and the syllabus are made for easy understanding of the concept.</p>
+                            <h6>Vinitha</h6>
+                            <span>HDCA Tally</span>
+                        </div>
+                    </div> <!-- singel testimonial -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="singel-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/t-2.jpg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-cont">
+                            <p>Fantastic Coaching. We can Practice a lot Assignments helps to excel our skills At last Fantabulas Staffs 💝R7</p>
+                            <h6>Yuvan Shankar</h6>
+                            <span>HDCA Programming</span>
+                        </div>
+                    </div> <!-- singel testimonial -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="singel-testimonial">
+                        <div class="testimonial-thum">
+                            <img src="images/testimonial/t-3.jpg" alt="Testimonial">
+                            <div class="quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-cont">
+                            <p>The way of teaching is very nice to understand the concept .I learned many things which I don't know,it is very useful to me</p>
+                            <h6>Mythili</h6>
+                            <span>HDCA Programming</span>
+                        </div>
+                    </div> <!-- singel testimonial -->
+                </div>
+            </div> <!-- testimonial slied -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== TEASTIMONIAL PART ENDS ======-->
+   
+    <!--====== NEWS PART START ======-->
+    
+    <!--====== NEWS PART ENDS ======-->
+   
+    <!--====== PATNAR LOGO PART START ======-->
+    
+    <div id="patnar-logo" class="pt-40 pb-80 gray-bg">
+        <div class="container">
+            <div class="row patnar-slied">
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-40">
+                        <a href="https://maps.app.goo.gl/BuvvGaKCxeye3L4Q8" target="_blank"> <img src="images/csc/CSC PVM.png" alt="Logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-40">
+                        <a href="https://maps.app.goo.gl/r8piVJm8YBY1ZCSU7" target="_blank"> <img src="images/csc/CSC PML.png" alt="Logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-40">
+                        <a href="https://maps.app.goo.gl/xE3uVaGiFYxB7W5b7" target="_blank">  <img src="images/csc/CSC CHR.png" alt="Logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-40">
+                        <a href="https://maps.app.goo.gl/7eM6u1G8iHzwXRtAA" target="_blank"> <img src="images/csc/7.jpeg" alt="Logo"> </a>
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> 
+    
+    <!--====== PATNAR LOGO PART ENDS ======-->
+    
+    <div class="map mt-30 mb-30">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.02298295369!2d80.14482437412029!3d12.970381114906926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525e33ea2a3597%3A0x375494b7f59633b7!2sCSC%20Computer%20Education!5e0!3m2!1sen!2sin!4v1705387528761!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div> <!-- map -->
+
+    <!--====== FOOTER PART START ======-->
+    
+    <footer id="footer-part">
+        <div class="footer-top pt-40 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-about mt-40">
+                            <div class="logo">
+                                <a href="#"><img src="images/CSC PVM 2.png" alt="Logo"></a>
+                            </div>
+                            <p>CSC Pallavaram is an educational institution focused on providing specialized training and skill development in various aspects of software development and IT-related fields from scratch.</p>
+                            <ul class="mt-20">
+                                <li><a href="#footer-part"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="#footer-part"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#footer-part"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#footer-part"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div> <!-- footer about -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-link mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>Sitemap</h6>
+                            </div>
+                            <ul>
+                                <li><a href="#slider-part"><i class="fa fa-angle-right"></i>Home</a></li>
+                                <li><a href="#about-part"><i class="fa fa-angle-right"></i>About us</a></li>
+                                <li><a href="#course-part"><i class="fa fa-angle-right"></i>Courses</a></li>
+                                <li><a href="#patnar-logo"><i class="fa fa-angle-right"></i>Centers</a></li>
+                                <li><a href="#testimonial"><i class="fa fa-angle-right"></i>Testimonials</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#teachers-part"><i class="fa fa-angle-right"></i>Gallery</a></li>
+                                <li><a href="#apply-aprt"><i class="fa fa-angle-right"></i>Scholarship</a></li>
+                                <li><a href="#publication-part"><i class="fa fa-angle-right"></i>Technologies</a></li>
+                                <li><a href="#video-feature"><i class="fa fa-angle-right"></i>Features</a></li>
+                                <li><a href="javascript:contactedMe()"><i class="fa fa-angle-right"></i>Contact</a></li>
+                            </ul>
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-link support mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>Support</h6>
+                            </div>
+                            <ul>
+                                <li><a href="#footer-part"><i class="fa fa-angle-right"></i>FAQS</a></li>
+                                <li><a href="#footer-part"><i class="fa fa-angle-right"></i>Privacy</a></li>
+                                <li><a href="#footer-part"><i class="fa fa-angle-right"></i>Policy</a></li>
+                                <li><a href="#footer-part"><i class="fa fa-angle-right"></i>Support</a></li>
+                                <li><a href="#footer-part"><i class="fa fa-angle-right"></i>Documentation</a></li>
+                            </ul>
+                        </div> <!-- support -->
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-address mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>Contact Us</h6>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p>No. 4/19, Church Street, Pallavaram, Chennai - 600043 (Opposite to Police Quarters)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p>+91 9710 434343</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-envelope-o"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p>cscpallavaram@gmail.com</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- footer address -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer top -->
+        
+        <div class="footer-copyright pt-10 pb-25">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="copyright text-md-left text-center pt-15">
+                            <p>Developed by CSC Students © 2024. Powered by <a target="_blank" href="#">Web Vibe</a> </p>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-4">
+                        <div class="copyright text-md-right text-center pt-15">
+                           <p><span>Hello</span></p>
+                        </div>
+                    </div> -->
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+    
+    <!--====== FOOTER PART ENDS ======-->
+   
+    <!--====== BACK TO TP PART START ======-->
+    
+    <a href="#" class="back-to-top"><img src="images/rocket.png"/></a>
+    <!-- <i class="fa fa-angle-up"></i> -->
+    <!--====== BACK TO TP PART ENDS ======-->
+   
+    
+    
+    
+    
+    
+    
+    
+    <!--====== jquery js ======-->
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="js/slick.min.js"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    
+    <!--====== Nice Select js ======-->
+    <script src="js/jquery.nice-select.min.js"></script>
+    
+    <!--====== Nice Number js ======-->
+    <script src="js/jquery.nice-number.min.js"></script>
+    
+    <!--====== Count Down js ======-->
+    <script src="js/jquery.countdown.min.js"></script>
+    
+    <!--====== Validator js ======-->
+    <script src="js/validator.min.js"></script>
+    
+    <!--====== Ajax Contact js ======-->
+    <script src="js/ajax-contact.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="js/main.js"></script>
+    
+    <!--====== Map js ======-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
+    <script src="js/map-script.js"></script>
+
+</body>
+</html>
